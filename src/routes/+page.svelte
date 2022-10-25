@@ -37,7 +37,7 @@
     flex-direction: column;
 
     .content {
-      margin-top: 200px;
+      margin-top: 260px;
 
       display: flex;
       justify-content: space-between;
