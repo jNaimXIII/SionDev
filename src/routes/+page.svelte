@@ -22,6 +22,18 @@
       </div>
     </div>
   </div>
+
+  <div class="exposure">
+    <div class="exposure-section-start" />
+
+    <div class="content">
+      <span class="initial">Development blockchain solutions</span>
+      <span class="tagline">because we are cool coders...</span>
+      <span class="signature">siondev ag</span>
+    </div>
+
+    <div class="exposure-section-end" />
+  </div>
 </main>
 
 <style lang="scss">
@@ -99,6 +111,92 @@
           width: 1000px;
 
           background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
+
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  .exposure {
+    margin: 100px 0;
+
+    .content {
+      padding: 152px 244px;
+
+      display: flex;
+      flex-direction: column;
+
+      font-family: "Ebrima", sans-serif;
+
+      .initial {
+        color: #74008c;
+        font-size: 36px;
+        letter-spacing: -0.055em;
+
+        margin-bottom: 40px;
+      }
+
+      .tagline {
+        align-self: center;
+
+        color: white;
+
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 94%;
+        letter-spacing: -0.055em;
+
+        margin-bottom: 60px;
+      }
+
+      .signature {
+        align-self: flex-end;
+
+        color: #ffffff;
+
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -0.055em;
+      }
+    }
+
+    &-section {
+      &-start,
+      &-end {
+        height: 4px;
+      }
+
+      &-start {
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0.2) 0%, rgba(116, 0, 140, 0.2) 100%);
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 847px;
+          height: 675px;
+          top: -100px;
+          left: -15%;
+          background: radial-gradient(50% 50% at 50% 50%, rgba(116, 0, 140, 0.08) 0%, rgba(116, 0, 140, 0) 100%);
+
+          z-index: -1;
+        }
+      }
+
+      &-end {
+        background: linear-gradient(270deg, rgba(116, 0, 140, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 750px;
+          height: 729px;
+          top: -740px;
+          right: 0;
+          background: radial-gradient(50% 50% at 50% 50%, rgba(116, 0, 140, 0.08) 0%, rgba(116, 0, 140, 0) 100%);
 
           z-index: -1;
         }
