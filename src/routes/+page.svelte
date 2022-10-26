@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Header from "$lib/components/global/Header.svelte";
+  import SiteHeader from "$lib/components/global/SiteHeader.svelte";
   import HeroBackgroundGrid from "./_HeroBackgroundGrid.svelte";
 </script>
 
@@ -9,8 +9,9 @@
 
 <main>
   <div class="hero">
-    <Header />
     <HeroBackgroundGrid />
+
+    <SiteHeader />
 
     <div class="content">
       <h1 class="site-heading">siondev ag</h1>
@@ -50,6 +51,10 @@
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 968px) {
+      padding: 16px;
+    }
+
     .content {
       margin-top: 260px;
 
@@ -65,9 +70,22 @@
       font-family: "Ebrima", sans-serif;
       letter-spacing: -0.055em;
 
+      @media (max-width: 1500px) {
+        flex-direction: column;
+        gap: 64px;
+      }
+
       .site-heading {
         font-size: 128px;
         position: relative;
+
+        @media (max-width: 968px) {
+          font-size: 96px;
+        }
+
+        @media (max-width: 532px) {
+          font-size: 66px;
+        }
 
         &::before {
           content: "";
@@ -76,7 +94,13 @@
           height: 675px;
           top: 50%;
           transform: translate(-60%, -50%);
+
           background: radial-gradient(50% 50% at 50% 50%, rgba(116, 0, 140, 0.5) 0%, rgba(116, 0, 140, 0) 100%);
+
+          @media (max-width: 768px) {
+            width: 500px;
+          }
+
           z-index: -1;
         }
       }
@@ -88,6 +112,14 @@
           .keywords {
             line-height: 93.59%;
             font-size: 96px;
+
+            @media (max-width: 968px) {
+              font-size: 64px;
+            }
+
+            @media (max-width: 768px) {
+              font-size: 44px;
+            }
           }
 
           .focus {
@@ -95,6 +127,10 @@
             font-size: 64px;
 
             color: #74008c;
+
+            @media (max-width: 968px) {
+              font-size: 34px;
+            }
           }
         }
 
@@ -114,6 +150,11 @@
 
           background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
 
+          @media (max-width: 968px) {
+            width: 500px;
+            height: 500px;
+          }
+
           z-index: -1;
         }
       }
@@ -128,6 +169,10 @@
       flex-direction: column;
 
       font-family: "Ebrima", sans-serif;
+
+      @media (max-width: 968px) {
+        padding: 38px;
+      }
 
       .initial {
         color: #74008c;
@@ -178,9 +223,14 @@
           height: 675px;
           top: -100px;
           left: -15%;
+
           background: radial-gradient(50% 50% at 50% 50%, rgba(116, 0, 140, 0.08) 0%, rgba(116, 0, 140, 0) 100%);
 
           z-index: -1;
+
+          @media (max-width: 968px) {
+            width: 100%;
+          }
         }
       }
 
@@ -196,9 +246,14 @@
           height: 729px;
           top: -740px;
           right: 0;
+
           background: radial-gradient(50% 50% at 50% 50%, rgba(116, 0, 140, 0.08) 0%, rgba(116, 0, 140, 0) 100%);
 
           z-index: -1;
+
+          @media (max-width: 968px) {
+            width: 100%;
+          }
         }
       }
     }
