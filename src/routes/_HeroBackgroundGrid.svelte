@@ -45,9 +45,9 @@
       }
 
       if (comeCloser) {
-        camera.position.z += 0.003;
+        camera.position.z += 0.006;
       } else {
-        camera.position.z -= 0.003;
+        camera.position.z -= 0.006;
       }
 
       renderer.render(scene, camera);
@@ -80,5 +80,9 @@
     top: 0;
     left: 0;
     z-index: -2;
+  }
+
+  :global(canvas) {
+    opacity: 0.3;
   }
 </style>
