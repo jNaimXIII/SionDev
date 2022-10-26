@@ -1,5 +1,6 @@
 <script lang="ts">
   import Header from "$lib/components/global/Header.svelte";
+  import HeroBackgroundGrid from "./_HeroBackgroundGrid.svelte";
 </script>
 
 <svetle:head>
@@ -9,6 +10,7 @@
 <main>
   <div class="hero">
     <Header />
+    <HeroBackgroundGrid />
 
     <div class="content">
       <h1 class="site-heading">siondev ag</h1>
@@ -119,7 +121,7 @@
   }
 
   .exposure {
-    margin: 100px 0;
+    // margin: 100px 0;
 
     .content {
       padding: 152px 244px;

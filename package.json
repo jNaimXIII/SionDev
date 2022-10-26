@@ -30,6 +30,8 @@
   },
   "type": "module",
   "dependencies": {
-    "sass": "^1.55.0"
+    "@types/three": "^0.144.0",
+    "sass": "^1.55.0",
+    "three": "^0.145.0"
   }
 }
