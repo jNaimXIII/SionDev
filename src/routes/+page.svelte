@@ -121,8 +121,6 @@
   }
 
   .exposure {
-    // margin: 100px 0;
-
     .content {
       padding: 152px 244px;
 
