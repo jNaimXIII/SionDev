@@ -24,7 +24,7 @@
     width: 20px;
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
-    animation: animate 25s linear infinite;
+    animation: animate 10s linear infinite;
     bottom: -150px;
   }
 
@@ -40,7 +40,7 @@
     width: 20px;
     height: 20px;
     animation-delay: 2s;
-    animation-duration: 12s;
+    animation-duration: 8s;
   }
 
   .circles li:nth-child(3) {
@@ -55,7 +55,7 @@
     width: 60px;
     height: 60px;
     animation-delay: 0s;
-    animation-duration: 18s;
+    animation-duration: 8s;
   }
 
   .circles li:nth-child(5) {
@@ -84,7 +84,7 @@
     width: 25px;
     height: 25px;
     animation-delay: 15s;
-    animation-duration: 45s;
+    animation-duration: 15s;
   }
 
   .circles li:nth-child(9) {
@@ -92,7 +92,7 @@
     width: 15px;
     height: 15px;
     animation-delay: 2s;
-    animation-duration: 35s;
+    animation-duration: 10s;
   }
 
   .circles li:nth-child(10) {
@@ -100,7 +100,7 @@
     width: 150px;
     height: 150px;
     animation-delay: 0s;
-    animation-duration: 11s;
+    animation-duration: 16s;
   }
 
   @keyframes animate {

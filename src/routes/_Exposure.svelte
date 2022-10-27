@@ -25,7 +25,7 @@
     background: rgba(109, 30, 30, 0.03);
 
     .content {
-      padding: 152px 244px;
+      padding: 72px 244px;
 
       display: flex;
       flex-direction: column;

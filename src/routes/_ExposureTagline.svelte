@@ -60,9 +60,13 @@
 
     color: white;
 
-    font-size: 66px;
+    font-size: 56px;
     font-weight: 700;
     line-height: 94%;
     text-align: center;
+
+    @media (max-width: 576px) {
+      font-size: 38px;
+    }
   }
 </style>
