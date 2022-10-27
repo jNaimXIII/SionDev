@@ -10,7 +10,7 @@
     { name: "Tokenization & Smart Contract", url: "" },
     { name: "Auditing", url: "" },
     { name: "Research & Development", url: "" },
-    { name: "Multiverse", url: "" },
+    { name: "Metaverse", url: "" },
     { name: "Contact Details", url: "" },
   ];
 
