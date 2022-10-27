@@ -56,15 +56,13 @@
 <style lang="scss">
   .tagline {
     align-self: center;
+    min-height: 2ch;
 
     color: white;
 
     font-size: 66px;
     font-weight: 700;
     line-height: 94%;
-    letter-spacing: -0.055em;
     text-align: center;
-
-    margin-bottom: 60px;
   }
 </style>

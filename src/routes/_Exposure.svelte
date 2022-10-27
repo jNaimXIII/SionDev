@@ -1,8 +1,11 @@
 <script>
+  import ExposureBackgroundParticles from "./_ExposureBackgroundParticles.svelte";
   import ExposureTagline from "./_ExposureTagline.svelte";
 </script>
 
 <div class="exposure">
+  <ExposureBackgroundParticles />
+
   <div class="exposure-section-start" />
 
   <div class="content">
@@ -18,6 +21,7 @@
 
 <style lang="scss">
   .exposure {
+    position: relative;
     background: rgba(109, 30, 30, 0.03);
 
     .content {
@@ -25,6 +29,7 @@
 
       display: flex;
       flex-direction: column;
+      gap: 44px;
 
       font-family: "Ebrima", sans-serif;
 
@@ -36,8 +41,6 @@
         color: #74008c;
         font-size: 36px;
         letter-spacing: -0.055em;
-
-        margin-bottom: 40px;
       }
 
       .signature {
