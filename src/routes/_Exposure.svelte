@@ -1,0 +1,107 @@
+<script>
+  import ExposureTagline from "./_ExposureTagline.svelte";
+</script>
+
+<div class="exposure">
+  <div class="exposure-section-start" />
+
+  <div class="content">
+    <span class="initial">Development blockchain solutions</span>
+
+    <ExposureTagline />
+
+    <span class="signature">siondev ag</span>
+  </div>
+
+  <div class="exposure-section-end" />
+</div>
+
+<style lang="scss">
+  .exposure {
+    background: rgba(109, 30, 30, 0.03);
+
+    .content {
+      padding: 152px 244px;
+
+      display: flex;
+      flex-direction: column;
+
+      font-family: "Ebrima", sans-serif;
+
+      @media (max-width: 968px) {
+        padding: 38px;
+      }
+
+      .initial {
+        color: #74008c;
+        font-size: 36px;
+        letter-spacing: -0.055em;
+
+        margin-bottom: 40px;
+      }
+
+      .signature {
+        align-self: flex-end;
+
+        color: #ffffff;
+
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -0.055em;
+      }
+    }
+
+    &-section {
+      &-start,
+      &-end {
+        height: 4px;
+      }
+
+      &-start {
+        background: linear-gradient(270deg, rgba(255, 255, 255, 0.2) 0%, rgba(116, 0, 140, 0.2) 100%);
+
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 847px;
+          height: 675px;
+          top: -100px;
+          left: -15%;
+
+          background: radial-gradient(50% 50% at 50% 50%, rgba(116, 0, 140, 0.08) 0%, rgba(116, 0, 140, 0) 100%);
+
+          z-index: -1;
+
+          @media (max-width: 968px) {
+            width: 100%;
+          }
+        }
+      }
+
+      &-end {
+        background: linear-gradient(270deg, rgba(116, 0, 140, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 750px;
+          height: 729px;
+          top: -740px;
+          right: 0;
+
+          background: radial-gradient(50% 50% at 50% 50%, rgba(116, 0, 140, 0.08) 0%, rgba(116, 0, 140, 0) 100%);
+
+          z-index: -1;
+
+          @media (max-width: 968px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+</style>
