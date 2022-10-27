@@ -59,10 +59,11 @@
 
     color: white;
 
-    font-size: 96px;
+    font-size: 66px;
     font-weight: 700;
     line-height: 94%;
     letter-spacing: -0.055em;
+    text-align: center;
 
     margin-bottom: 60px;
   }
