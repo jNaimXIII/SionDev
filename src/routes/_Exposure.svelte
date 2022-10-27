@@ -96,6 +96,7 @@
           position: absolute;
           width: 847px;
           height: 675px;
+          max-height: 100%;
           top: -100px;
           left: -15%;
 
