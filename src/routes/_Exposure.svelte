@@ -55,13 +55,39 @@
     }
 
     &-section {
+      @keyframes background-pan {
+        from {
+          background-position: 0% center;
+        }
+        to {
+          background-position: -200% center;
+        }
+      }
+
+      @keyframes background-pan-alt {
+        from {
+          background-position: -200% center;
+        }
+        to {
+          background-position: 0% center;
+        }
+      }
+
       &-start,
       &-end {
         height: 4px;
       }
 
       &-start {
-        background: linear-gradient(270deg, rgba(255, 255, 255, 0.2) 0%, rgba(116, 0, 140, 0.2) 100%);
+        background: linear-gradient(
+          270deg,
+          rgba(255, 255, 255, 0.2),
+          rgba(116, 0, 140, 0.2),
+          rgba(116, 0, 140, 0.2),
+          rgba(255, 255, 255, 0.2)
+        );
+        background-size: 200%;
+        animation: background-pan 3s linear infinite;
 
         position: relative;
 
@@ -84,7 +110,15 @@
       }
 
       &-end {
-        background: linear-gradient(270deg, rgba(116, 0, 140, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+        background: linear-gradient(
+          270deg,
+          rgba(116, 0, 140, 0.2),
+          rgba(255, 255, 255, 0.2),
+          rgba(255, 255, 255, 0.2),
+          rgba(116, 0, 140, 0.2)
+        );
+        background-size: 200%;
+        animation: background-pan-alt 3s linear infinite;
 
         position: relative;
 
