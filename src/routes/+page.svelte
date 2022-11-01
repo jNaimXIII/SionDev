@@ -1,6 +1,7 @@
 <script lang="ts">
-  import Exposure from "./_Exposure.svelte";
   import Hero from "./_Hero.svelte";
+  import Exposure from "./_Exposure.svelte";
+    import SmartContracts from "./_SmartContracts.svelte";
 </script>
 
 <svetle:head>
@@ -11,6 +12,8 @@
   <Hero />
 
   <Exposure />
+
+  <SmartContracts />
 </main>
 
 <style lang="scss">

@@ -1,14 +1,14 @@
 <script lang="ts">
   export let label: string;
-  export let onClick: (event: MouseEvent) => void = () => {};
+  export let handleClick: (event: MouseEvent) => void = () => {};
 </script>
 
-<button on:click={onClick}>{label}</button>
+<button on:click={handleClick}>{label}</button>
 
 <style lang="scss">
   button {
     font-family: "Ebirma", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
 
     padding: 12px 44px;

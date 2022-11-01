@@ -2,7 +2,7 @@
   import { slide } from "svelte/transition";
   import Fa from "svelte-fa/src/fa.svelte";
   import { faBars } from "@fortawesome/free-solid-svg-icons";
-  import Button from "../button/Button.svelte";
+  import SiteHeaderActionButton from "../button/SiteHeaderActionButton.svelte";
   import { onMount } from "svelte";
 
   const links = [
@@ -51,7 +51,7 @@
       {/each}
     </nav>
 
-    <Button label="Contact Us" />
+    <SiteHeaderActionButton label="Contact Us" />
   </header>
 {/if}
 
