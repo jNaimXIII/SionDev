@@ -14,7 +14,8 @@
     const intervalTime = 100;
     const pauseIterations = 8; // intervalTime * x
 
-    let direction = "forwards";
+    type DirectionType = "forwards" | "backwards";
+    let direction: DirectionType = "forwards";
     let shownLineLength = 0;
     let currentLineIndex = 0;
     let currentLine = lines[currentLineIndex];
@@ -30,8 +31,23 @@
         }
       }
 
-      if (shownLineLength < currentLine.length && direction === "forwards") shownLineLength++;
-      if (shownLineLength > 0 && direction === "backwards") shownLineLength--;
+      const isNextCharSpace = () => {
+        if (shownLineLength === 0) return false;
+
+        const nextChar = direction === "forwards" ? shownLineLength + 1 : shownLineLength - 1;
+
+        return currentLine[nextChar] === " ";
+      };
+
+      if (shownLineLength < currentLine.length && direction === "forwards") {
+        if (isNextCharSpace()) shownLineLength += 2;
+        else shownLineLength++;
+      }
+
+      if (shownLineLength > 0 && direction === "backwards") {
+        if (isNextCharSpace()) shownLineLength -= 2;
+        else shownLineLength--;
+      }
 
       taglineElement.innerText = currentLine.slice(0, shownLineLength);
 
