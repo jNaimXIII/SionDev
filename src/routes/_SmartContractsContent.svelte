@@ -111,8 +111,8 @@
 
     .body,
     .footer {
-      font-size: 20px;
-      line-height: 93.59%;
+      font-size: 18px;
+      line-height: 1.2em;
       letter-spacing: -0.055em;
       color: #c2c0c0;
       width: 422px;
@@ -153,9 +153,10 @@
 
   .logo {
     right: 200px;
-    bottom: 360px;
+    bottom: 300px;
     width: 500px;
     animation: bounce 4s ease-in-out infinite;
+    z-index: 2;
 
     @media (max-width: 1440px) {
       right: 100px;
@@ -164,6 +165,7 @@
     @media (max-width: 1200px) {
       width: 400px;
       right: 120px;
+      bottom: 260px;
     }
 
     @media (max-width: 970px) {
@@ -173,7 +175,7 @@
     @media (max-width: 510px) {
       width: 70vw;
       left: calc(50% - 35vw);
-      bottom: 70vw;
+      bottom: 45vw;
     }
   }
 

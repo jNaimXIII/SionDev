@@ -33,7 +33,7 @@
     position: relative;
 
     padding: 100px;
-    height: 1000px;
+    min-height: 960px;
     overflow: hidden;
 
     background-image: url("images/token_platform_background.png");
@@ -41,22 +41,28 @@
     background-position: cover;
     background-position: bottom right;
 
+    @media (max-width: 1200px) {
+    }
+
     @media (max-width: 970px) {
-      height: 1600px;
       background: none;
+      padding-bottom: 800px;
     }
 
     @media (max-width: 768px) {
       padding: 60px;
+      padding-bottom: 800px;
       background: none;
     }
 
     @media (max-width: 576px) {
       padding: 40px;
+      padding-bottom: 140vw;
     }
 
     @media (max-width: 375px) {
       padding: 1rem;
+      padding-bottom: 130vw;
     }
 
     .token-platform {
@@ -79,7 +85,7 @@
       }
 
       @media (max-width: 510px) {
-        width: calc(100% - 60px);
+        width: calc(100vw - 60px);
       }
     }
 

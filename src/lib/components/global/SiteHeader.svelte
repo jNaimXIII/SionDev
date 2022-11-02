@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { slide } from "svelte/transition";
+  import { fly } from "svelte/transition";
   import Fa from "svelte-fa/src/fa.svelte";
   import { faBars } from "@fortawesome/free-solid-svg-icons";
   import SiteHeaderActionButton from "../button/SiteHeaderActionButton.svelte";
@@ -44,7 +44,7 @@
 </button>
 
 {#if isMenuToggled}
-  <header transition:slide>
+  <header transition:fly={{ y: 100 }}>
     <nav>
       {#each links as link}
         <a href={link.url}>{link.name}</a>

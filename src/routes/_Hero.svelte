@@ -8,7 +8,7 @@
 <div class="hero">
   <SiteHeader />
 
-  <!-- <HeroBackgroundGrid /> -->
+  <HeroBackgroundGrid />
   <HeroBackgroundParticles />
 
   <HeroContent />
