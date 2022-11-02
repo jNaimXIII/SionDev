@@ -40,5 +40,9 @@
       cursor: pointer;
       background: rgba(61, 23, 69, 0.5);
     }
+
+    @media (max-width: 970px) {
+      flex: 1;
+    }
   }
 </style>

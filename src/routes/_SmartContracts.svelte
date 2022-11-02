@@ -9,8 +9,6 @@
 </script>
 
 <div class="smart-contracts">
-  <img class="token-platform" src={TokenPlatformImage} alt="Token platform" />
-
   {#each smartContractSections as section, paneIndex}
     {#if activePane === paneIndex}
       <SmartContractsContent {...section} />
@@ -26,6 +24,8 @@
       />
     {/each}
   </div>
+
+  <img class="token-platform" src={TokenPlatformImage} alt="Token platform" />
 </div>
 
 <style lang="scss">
@@ -33,7 +33,7 @@
     position: relative;
 
     padding: 100px;
-    min-height: 100vh;
+    height: 1000px;
     overflow: hidden;
 
     background-image: url("images/token_platform_background.png");
@@ -41,11 +41,46 @@
     background-position: cover;
     background-position: bottom right;
 
+    @media (max-width: 970px) {
+      height: 1600px;
+      background: none;
+    }
+
+    @media (max-width: 768px) {
+      padding: 60px;
+      background: none;
+    }
+
+    @media (max-width: 576px) {
+      padding: 40px;
+    }
+
+    @media (max-width: 375px) {
+      padding: 1rem;
+    }
+
     .token-platform {
       position: absolute;
-      bottom: -2rem;
+      bottom: 0;
       right: 190px;
-      width: 540px;
+      width: 530px;
+
+      @media (max-width: 1440px) {
+        right: 90px;
+      }
+
+      @media (max-width: 1200px) {
+        width: 440px;
+      }
+
+      @media (max-width: 970px) {
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      @media (max-width: 510px) {
+        width: calc(100% - 60px);
+      }
     }
 
     .showcase-buttons {
@@ -54,6 +89,21 @@
       left: 100px;
       display: flex;
       gap: 1rem;
+
+      z-index: 1;
+
+      @media (max-width: 970px) {
+        position: initial;
+        margin-top: 6rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+
+      @media (max-width: 375px) {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+      }
     }
   }
 </style>

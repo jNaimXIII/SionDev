@@ -53,21 +53,23 @@
   </div>
 </div>
 
-<div class="banner">
-  {#if logo}
-    <img class="logo" src={logo} alt={name} in:fade={{ duration: 1400, easing: backIn }} />
-  {/if}
+{#if logo}
+  <img class="logo" src={logo} alt={name} in:fade={{ duration: 1400, easing: backIn }} />
+{/if}
 
-  {#if background}
-    <img class="background" src={background} alt={name} in:fade={{ duration: 1000, easing: backIn }} />
-  {/if}
-</div>
+{#if background}
+  <img class="background" src={background} alt={name} in:fade={{ duration: 1000, easing: backIn }} />
+{/if}
 
 <style lang="scss">
   .section {
     width: 50%;
     font-family: "Ebrima", sans-serif;
     color: white;
+
+    @media (max-width: 970px) {
+      width: 100%;
+    }
 
     .topic {
       font-size: 40px;
@@ -76,6 +78,10 @@
       margin-bottom: 30px;
       line-height: 93.59%;
       letter-spacing: -0.055em;
+
+      @media (max-width: 510px) {
+        font-size: 34px;
+      }
     }
 
     .heading {
@@ -84,6 +90,10 @@
       text-transform: uppercase;
       margin-bottom: 30px;
       line-height: 93.59%;
+
+      @media (max-width: 510px) {
+        font-size: 44px;
+      }
     }
 
     .sub-heading {
@@ -93,6 +103,10 @@
       margin-bottom: 33px;
       line-height: 93.59%;
       width: 30ch;
+
+      @media (max-width: 510px) {
+        width: 100%;
+      }
     }
 
     .body,
@@ -102,6 +116,14 @@
       letter-spacing: -0.055em;
       color: #c2c0c0;
       width: 422px;
+
+      @media (max-width: 1200px) {
+        width: 340px;
+      }
+
+      @media (max-width: 970px) {
+        width: 100%;
+      }
     }
 
     .body {
@@ -113,34 +135,55 @@
     }
   }
 
-  .banner {
-    .logo,
-    .background {
-      position: absolute;
+  .logo,
+  .background {
+    position: absolute;
+  }
+
+  @keyframes bounce {
+    from,
+    to {
+      transform: translateY(0);
     }
 
-    @keyframes bounce {
-      from,
-      to {
-        transform: translateY(0);
-      }
+    50% {
+      transform: translateY(-2rem);
+    }
+  }
 
-      50% {
-        transform: translateY(-2rem);
-      }
+  .logo {
+    right: 200px;
+    bottom: 360px;
+    width: 500px;
+    animation: bounce 4s ease-in-out infinite;
+
+    @media (max-width: 1440px) {
+      right: 100px;
     }
 
-    .logo {
-      right: 200px;
-      bottom: 360px;
-      width: 500px;
-      animation: bounce 4s ease-in-out infinite;
+    @media (max-width: 1200px) {
+      width: 400px;
+      right: 120px;
     }
 
-    .background {
-      bottom: 0;
-      right: 0;
-      height: 100%;
+    @media (max-width: 970px) {
+      left: calc(50% - 200px);
+    }
+
+    @media (max-width: 510px) {
+      width: 70vw;
+      left: calc(50% - 35vw);
+      bottom: 70vw;
+    }
+  }
+
+  .background {
+    bottom: 0;
+    right: 0;
+    height: 100%;
+
+    @media (max-width: 970px) {
+      z-index: -1;
     }
   }
 </style>
