@@ -1,29 +1,66 @@
 <script lang="ts">
   import SmartContractButton from "$lib/components/button/SmartContractButton.svelte";
-  import EthereumLogo from "$lib/assets/images/ethereum.png";
-  import EthereumBackground from "$lib/assets/images/ethereum_background.png";
 
+  import EthereumLogo from "$lib/assets/images/ethereum.png";
+  import BNBLogo from "$lib/assets/images/bnb.png";
+  import NFTLogo from "$lib/assets/images/nft.png";
+  import PrivateBlockchainLogo from "$lib/assets/images/private_blockchain.png";
+
+  import EthereumBackground from "$lib/assets/images/ethereum_background.png";
+  import BNBBackgound from "$lib/assets/images/bnb_background.png";
+
+  import { fade, fly } from "svelte/transition";
+  import { backIn } from "svelte/easing";
+
+  export let name: string;
   export let heading: string;
   export let subHeading: string;
   export let body: string;
   export let footer: string;
   export let handleClick = () => {};
+
+  const getBackgroundImage = () => {
+    switch (name) {
+      case "Ethereum":
+        return { logo: EthereumLogo, background: EthereumBackground };
+      case "BNB":
+        return { logo: BNBLogo, background: BNBBackgound };
+      case "NFT":
+        return { logo: NFTLogo, background: "" };
+      case "Private Blockchain":
+        return { logo: PrivateBlockchainLogo, background: "" };
+      default:
+        return { logo: "", background: "" };
+    }
+  };
+  const { logo, background } = getBackgroundImage();
 </script>
 
 <div class="section">
-  <span class="topic">Tokenization & Smart Contract</span>
-  <h3 class="heading">{heading}</h3>
-  <p class="sub-heading">{subHeading}</p>
+  <span class="topic" in:fly={{ duration: 700, x: 200 }}>Tokenization & Smart Contract</span>
+  <h3 class="heading" in:fly={{ duration: 800, x: 220 }}>{heading}</h3>
+  <p class="sub-heading" in:fly={{ duration: 900, x: 240 }}>{subHeading}</p>
 
-  <p class="body">{body}</p>
-  <p class="footer">{footer}</p>
+  <p class="body" in:fly={{ duration: 1000, x: 260 }}>{body}</p>
+  <p class="footer" in:fly={{ duration: 1100, x: 280 }}>{footer}</p>
 
-  <SmartContractButton {handleClick} name="Start Here" styles={{ border: "1px solid purple", padding: "12px 46px" }} />
+  <div in:fly={{ duration: 1200, x: 300 }}>
+    <SmartContractButton
+      {handleClick}
+      name="Start Here"
+      styles={{ border: "1px solid purple", padding: "12px 46px" }}
+    />
+  </div>
 </div>
 
 <div class="banner">
-  <img class="logo" src={EthereumLogo} alt="Ethereum" />
-  <img class="background" src={EthereumBackground} alt="Ethereum background" />
+  {#if logo}
+    <img class="logo" src={logo} alt={name} in:fade={{ duration: 1400, easing: backIn }} />
+  {/if}
+
+  {#if background}
+    <img class="background" src={background} alt={name} in:fade={{ duration: 1000, easing: backIn }} />
+  {/if}
 </div>
 
 <style lang="scss">

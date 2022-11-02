@@ -4,20 +4,27 @@
   import TokenPlatformImage from "$lib/assets/images/token_platform.png";
   import SmartContractButton from "$lib/components/button/SmartContractButton.svelte";
   import SmartContractsContent from "./_SmartContractsContent.svelte";
+
+  let activePane = 0;
 </script>
 
 <div class="smart-contracts">
   <img class="token-platform" src={TokenPlatformImage} alt="Token platform" />
 
-  {#each smartContractSections as section}
-    <SmartContractsContent {...section} />
+  {#each smartContractSections as section, paneIndex}
+    {#if activePane === paneIndex}
+      <SmartContractsContent {...section} />
+    {/if}
   {/each}
 
   <div class="showcase-buttons">
-    <SmartContractButton name="Ethereum" />
-    <SmartContractButton name="BNB" />
-    <SmartContractButton name="NFT" />
-    <SmartContractButton name="Private Blockchain" />
+    {#each smartContractSections as section, paneIndex}
+      <SmartContractButton
+        name={section.name}
+        handleClick={() => (activePane = paneIndex)}
+        isActive={activePane === paneIndex}
+      />
+    {/each}
   </div>
 </div>
 

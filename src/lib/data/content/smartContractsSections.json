@@ -1,8 +1,30 @@
 [
   {
+    "name": "Ethereum",
     "heading": "ERC20 TOKEN",
     "subHeading": "ETHEREUM VIRTUAL MACHINE TOKEN DEVELOPMENT",
     "body": "Development of classic token based on the Ethereum blockchain.  Ideal for projects in beta or test mode (TestNet). Smart contract code writing for the creation of tokens on the Ethereum network. We work with the best professionals belonging to official Ethereum technology dev groups.",
+    "footer": "Share your ideas with us, send info about your project, any idea you want to tokenize. To start collaborating, contact us here and let's do it together."
+  },
+  {
+    "name": "BNB",
+    "heading": "BEP20 TOKEN",
+    "subHeading": "BINANCE SMART CHAIN DEVELOPMENT",
+    "body": "Ideal for DeFi projects! Minimum cost per transaction, very fast, available wallet, Swaps and Pool for Liquidéz. The fastest and most flexible way to tokenize an asset, develop a token and register it in binance DEX.",
+    "footer": "Create new digital solutions on the Binance blockchain, with a direct possibility to list your token on Binance Smart Chain and support during the development of the smart contract with BEP20 and BEP28 protocol. We can follow you through the entire process, so you're good to go!"
+  },
+  {
+    "name": "NFT",
+    "heading": "NON FUNGIBLE TOKEN (NFT)",
+    "subHeading": "PoS, DPoS, PoW, and more.",
+    "body": "Non Fungible Token (NFT) is a type of digital asset registered on your blockchain. Compared to utility tokens and cryptocurrencies, NFT tokens have 3 characteristics that distinguish them: they are unique, rare and indivisible. Gli NFT is definitively certified as a digital certificate that certifies the ownership of a beneficial data or service attracted by the use of blockchain technology. They are defined as \"non-fungible\" because they are unique and non-interchangeable \"tokens\", as can happen for banknotes, for example, or precisely the cryptocurrency like Bitcoin or Ether.",
+    "footer": "We develop nft solutions for our customers and have our own research projects contact us here and let's do it together."
+  },
+  {
+    "name": "Private Blockchain",
+    "heading": "PRIVATE BLOCKCHAIN",
+    "subHeading": "ETHEREUM VIRTUAL MACHINE TOKEN DEVELOPMENT",
+    "body": "Ideal for large-scale projects with a larger budget and time for development. Multiple Applications. We develop custom DAPs and blockchains that adapt to every need. Contact us for more information.",
     "footer": "Share your ideas with us, send info about your project, any idea you want to tokenize. To start collaborating, contact us here and let's do it together."
   }
 ]
