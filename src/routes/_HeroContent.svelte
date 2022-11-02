@@ -1,9 +1,13 @@
 <script lang="ts">
-  import HeroGlitchHeading from "./_HeroGlitchHeading.svelte";
+  // import HeroGlitchHeading from "./_HeroGlitchHeading.svelte";
+  import SionDevAGLogo from "$lib/assets/images/siondev_ag.png";
 </script>
 
 <div class="content">
-  <HeroGlitchHeading />
+  <!-- <HeroGlitchHeading /> -->
+  <div class="logo">
+    <img class="siondev-logo" src={SionDevAGLogo} alt="SionDev AG" />
+  </div>
 
   <div class="catchphrase">
     <p class="punchline">
@@ -29,6 +33,22 @@
     @media (max-width: 1500px) {
       flex-direction: column;
       gap: 64px;
+    }
+
+    .logo {
+      position: relative;
+      flex: 1;
+
+      &::before {
+        content: "";
+        top: -300%;
+        left: -50%;
+        position: absolute;
+        width: 847px;
+        height: 675px;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(116, 0, 140, 0.5) 0%, rgba(116, 0, 140, 0) 100%);
+        opacity: 0.7;
+      }
     }
 
     .catchphrase {

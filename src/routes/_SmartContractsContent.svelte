@@ -113,7 +113,6 @@
     .footer {
       font-size: 18px;
       line-height: 1.2em;
-      letter-spacing: -0.055em;
       color: #c2c0c0;
       width: 422px;
 
