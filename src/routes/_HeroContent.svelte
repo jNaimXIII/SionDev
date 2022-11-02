@@ -48,6 +48,7 @@
         height: 675px;
         background: radial-gradient(50% 50% at 50% 50%, rgba(116, 0, 140, 0.5) 0%, rgba(116, 0, 140, 0) 100%);
         opacity: 0.7;
+        z-index: -1;
       }
     }
 
