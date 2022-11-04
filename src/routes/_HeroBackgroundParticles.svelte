@@ -23,7 +23,7 @@
 
     &::before,
     &::after
-      background: red
+      background: transparent
       content: ''
       position: absolute
       width: 100%
@@ -32,7 +32,7 @@
       transform-origin: -10vw
 
     &::before
-      background: black
+      background: transparent
       opacity: 0.4
       animation: drift ease alternate infinite
 

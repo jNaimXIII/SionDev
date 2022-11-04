@@ -50,6 +50,10 @@
         opacity: 0.7;
         z-index: -1;
       }
+
+      img {
+        max-width: 100%;
+      }
     }
 
     .catchphrase {
@@ -57,6 +61,8 @@
       flex: 1;
 
       .punchline {
+        font-weight: bold;
+
         .keywords {
           line-height: 93.59%;
           font-size: 96px;
@@ -74,7 +80,7 @@
           font-weight: 700;
           font-size: 64px;
 
-          color: #74008c;
+          // color: #74008c;
 
           @media (max-width: 968px) {
             font-size: 34px;

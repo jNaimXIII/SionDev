@@ -2,7 +2,7 @@
   import Hero from "./_Hero.svelte";
   import Exposure from "./_Exposure.svelte";
   import SmartContracts from "./_SmartContracts.svelte";
-  import HeroCatchphraseBackground from "./HeroCatchphraseBackground.svelte";
+  import HeroBackgroundHalo from "./_HeroBackgroundHalo.svelte";
 </script>
 
 <svetle:head>
@@ -10,7 +10,7 @@
 </svetle:head>
 
 <main>
-  <HeroCatchphraseBackground />
+  <HeroBackgroundHalo />
   <Hero />
 
   <Exposure />
