@@ -16,6 +16,7 @@
       minHeight: window.innerHeight,
       minWidth: window.innerWidth - 100,
       backgroundColor: 0x0,
+      xOffset: 0.16,
     });
 
     const handleResize = () => {
@@ -32,9 +33,3 @@
 </script>
 
 <div class="background" bind:this={backgroundElement} />
-
-<style lang="scss">
-  .background {
-    //
-  }
-</style>

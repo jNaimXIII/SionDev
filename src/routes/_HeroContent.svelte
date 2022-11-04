@@ -61,7 +61,7 @@
       flex: 1;
 
       .punchline {
-        font-weight: bold;
+        font-weight: 700;
 
         .keywords {
           line-height: 93.59%;
@@ -80,7 +80,7 @@
           font-weight: 700;
           font-size: 64px;
 
-          // color: #74008c;
+          color: #74008c;
 
           @media (max-width: 968px) {
             font-size: 34px;
