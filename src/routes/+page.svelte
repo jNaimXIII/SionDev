@@ -1,7 +1,8 @@
 <script lang="ts">
   import Hero from "./_Hero.svelte";
   import Exposure from "./_Exposure.svelte";
-    import SmartContracts from "./_SmartContracts.svelte";
+  import SmartContracts from "./_SmartContracts.svelte";
+  import HeroCatchphraseBackground from "./HeroCatchphraseBackground.svelte";
 </script>
 
 <svetle:head>
@@ -9,6 +10,7 @@
 </svetle:head>
 
 <main>
+  <HeroCatchphraseBackground />
   <Hero />
 
   <Exposure />
