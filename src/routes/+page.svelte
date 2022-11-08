@@ -1,8 +1,9 @@
 <script lang="ts">
+  import HeroBackgroundHalo from "./_HeroBackgroundHalo.svelte";
   import Hero from "./_Hero.svelte";
   import Exposure from "./_Exposure.svelte";
   import SmartContracts from "./_SmartContracts.svelte";
-  import HeroBackgroundHalo from "./_HeroBackgroundHalo.svelte";
+  import Metaverse from "./_Metaverse.svelte";
 </script>
 
 <svetle:head>
@@ -16,10 +17,12 @@
   <Exposure />
 
   <SmartContracts />
+
+  <Metaverse />
 </main>
 
 <style lang="scss">
   :global(body) {
-    background: #111;
+    background: black;
   }
 </style>
