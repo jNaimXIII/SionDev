@@ -14,10 +14,10 @@
   <img src={MetaverseBackgroundImage} alt="Overlay" class="overlay" />
   <img src={MetaverseBackgroundOverlay} alt="Sprite" class="sprite" />
 
+  <div class="gradient-overlay" />
+
   <img src={MetaverseHeading} alt="Metaverse heading" class="heading" />
   <img src={MetaverseSubHeading} alt="Metaverse sub-heading" class="sub-heading" />
-
-  <div class="gradient-overlay" />
 </div>
 
 <div class="metaverse-content">
