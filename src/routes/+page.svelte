@@ -1,5 +1,5 @@
 <script lang="ts">
-  import HeroBackgroundHalo from "./_HeroBackgroundHalo.svelte";
+  import HeroBackgroundGlobe from "./_HeroBackgroundGlobe.svelte";
   import Hero from "./_Hero.svelte";
   import Exposure from "./_Exposure.svelte";
   import SmartContracts from "./_SmartContracts.svelte";
@@ -11,7 +11,7 @@
 </svetle:head>
 
 <main>
-  <HeroBackgroundHalo />
+  <HeroBackgroundGlobe />
   <Hero />
 
   <Exposure />
