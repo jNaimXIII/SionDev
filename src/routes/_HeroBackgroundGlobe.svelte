@@ -15,6 +15,9 @@
       gyroControls: false,
       minHeight: window.innerHeight,
       minWidth: window.innerWidth - 100,
+      color: 0xffffff,
+      color2: 0xffffff,
+      backgroundColor: 0x0,
     });
 
     const handleResize = () => {
