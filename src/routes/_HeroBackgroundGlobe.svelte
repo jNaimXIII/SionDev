@@ -37,6 +37,6 @@
 
 <style lang="scss">
   .background {
-    opacity: 0.4;
+    opacity: 0.3;
   }
 </style>
