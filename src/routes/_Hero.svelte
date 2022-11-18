@@ -1,6 +1,6 @@
 <script lang="ts">
   import SiteHeader from "$lib/components/global/SiteHeader.svelte";
-  import HeroBackgroundGrid from "./_HeroBackgroundGrid.svelte";
+  // import HeroBackgroundGrid from "./_HeroBackgroundGrid.svelte";
   import HeroBackgroundParticles from "./_HeroBackgroundParticles.svelte";
   import HeroContent from "./_HeroContent.svelte";
 </script>
@@ -8,7 +8,7 @@
 <div class="hero">
   <SiteHeader />
 
-  <HeroBackgroundGrid />
+  <!-- <HeroBackgroundGrid /> -->
   <HeroBackgroundParticles />
 
   <HeroContent />
