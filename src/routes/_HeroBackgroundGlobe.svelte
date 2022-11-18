@@ -15,9 +15,6 @@
       gyroControls: false,
       minHeight: window.innerHeight,
       minWidth: window.innerWidth - 100,
-      color: 0xffffff,
-      color2: 0xffffff,
-      backgroundColor: 0x0,
     });
 
     const handleResize = () => {
@@ -34,3 +31,9 @@
 </script>
 
 <div class="background" bind:this={backgroundElement} />
+
+<style lang="scss">
+  .background {
+    opacity: 0.4;
+  }
+</style>
