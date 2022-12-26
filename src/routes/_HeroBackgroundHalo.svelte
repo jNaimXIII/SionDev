@@ -7,29 +7,59 @@
   let backgroundElement: HTMLDivElement;
 
   onMount(() => {
-    const haloEffect = HALO({
+    const exposureElement = document.getElementById("exposure");
+    const exposureElementHeight = exposureElement?.clientHeight || 0;
+
+    let haloEffect: any;
+
+    haloEffect = HALO({
       el: backgroundElement,
       THREE: THREE,
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
-      minHeight: window.innerHeight,
+      minHeight: window.innerHeight + exposureElementHeight,
       minWidth: window.innerWidth - 100,
       backgroundColor: 0x0,
       xOffset: 0.16,
+      yOffset: 0.115,
+      forceAnimate: true,
     });
 
     const handleResize = () => {
-      haloEffect.resize();
+      haloEffect.destroy();
+
+      haloEffect = HALO({
+        el: backgroundElement,
+        THREE: THREE,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: window.innerHeight + exposureElementHeight,
+        minWidth: window.innerWidth - 100,
+        backgroundColor: 0x0,
+        xOffset: 0.16,
+        forceAnimate: true,
+      });
     };
 
     window.addEventListener("resize", handleResize);
 
     return () => {
-      haloEffect.destroy();
       window.removeEventListener("resize", handleResize);
     };
   });
 </script>
 
 <div class="background" bind:this={backgroundElement} />
+
+<style lang="scss">
+  .background {
+    position: relative;
+    // z-index: 2;
+  }
+
+  :global(canvas.vanta-canvas) {
+    opacity: 0.3;
+  }
+</style>

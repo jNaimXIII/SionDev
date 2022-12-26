@@ -3,7 +3,7 @@
   import ExposureTagline from "./_ExposureTagline.svelte";
 </script>
 
-<div class="exposure">
+<div id="exposure" class="exposure">
   <ExposureBackgroundParticles />
 
   <!-- <div class="exposure-section-start" /> -->
@@ -22,7 +22,6 @@
 <style lang="scss">
   .exposure {
     position: relative;
-    background: rgba(109, 30, 30, 0.03);
 
     .content {
       padding: 72px 244px;
@@ -101,8 +100,7 @@
       //     left: -15%;
 
       //     background: radial-gradient(50% 50% at 50% 50%, rgba(116, 0, 140, 0.08) 0%, rgba(116, 0, 140, 0) 100%);
-
-      //     z-index: -1;
+      //     background: red;
 
       //     @media (max-width: 968px) {
       //       width: 100%;
@@ -133,7 +131,7 @@
 
           background: radial-gradient(50% 50% at 50% 50%, rgba(116, 0, 140, 0.08) 0%, rgba(116, 0, 140, 0) 100%);
 
-          z-index: -1;
+          z-index: 1;
 
           @media (max-width: 968px) {
             width: 100%;

@@ -5,6 +5,12 @@
   let gridDOMElement: HTMLDivElement;
 
   onMount(() => {
+    const exposureElement = document.getElementById("exposure");
+    const exposureElementHeight = exposureElement?.clientHeight || 0;
+
+    const initialClientHeight = gridDOMElement.clientHeight;
+    gridDOMElement.style.height = `${initialClientHeight + exposureElementHeight}px`;
+
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(gridDOMElement.clientWidth, gridDOMElement.clientHeight);
 
@@ -56,11 +62,17 @@
     renderer.setAnimationLoop(animate);
 
     const resizeListener = function () {
+      const exposureElementHeight = exposureElement?.clientHeight || 0;
+
+      gridDOMElement.style.height = `${initialClientHeight + exposureElementHeight}px`;
+
       camera.aspect = gridDOMElement.clientWidth / gridDOMElement.clientHeight;
       camera.updateProjectionMatrix();
 
       renderer.setSize(gridDOMElement.clientWidth, gridDOMElement.clientHeight);
     };
+
+    resizeListener();
 
     window.addEventListener("resize", resizeListener);
 
@@ -82,7 +94,7 @@
     z-index: -2;
   }
 
-  :global(canvas) {
-    opacity: 0.3;
-  }
+  // :global(canvas:not(.vanta-canvas)) {
+  //   opacity: 0.3;
+  // }
 </style>

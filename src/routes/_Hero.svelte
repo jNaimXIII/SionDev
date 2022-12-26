@@ -8,7 +8,7 @@
 <div class="hero">
   <SiteHeader />
 
-  <HeroBackgroundGrid />
+  <!-- <HeroBackgroundGrid /> -->
   <HeroBackgroundParticles />
 
   <HeroContent />
@@ -20,6 +20,7 @@
     overflow: hidden;
     min-height: 100vh;
     padding: 100px;
+    // background: rgba(0, 0, 0, 0.3);
 
     display: flex;
     flex-direction: column;

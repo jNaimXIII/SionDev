@@ -108,7 +108,7 @@
           height: 500px;
         }
 
-        z-index: -1;
+        z-index: 8;
       }
     }
   }

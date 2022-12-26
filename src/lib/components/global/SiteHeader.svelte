@@ -51,7 +51,7 @@
       {/each}
     </nav>
 
-    <SiteHeaderActionButton label="Contact Us" />
+    <SiteHeaderActionButton label="Contact us" />
   </header>
 {/if}
 
@@ -75,6 +75,8 @@
   }
 
   header {
+    position: relative;
+    z-index: 8;
     display: flex;
     justify-content: space-between;
     align-items: center;
