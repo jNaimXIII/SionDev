@@ -2,4 +2,6 @@
   import "$lib/styles/globals.scss";
 </script>
 
-<slot />
+<!-- <slot /> -->
+
+<h1>N / A</h1>
