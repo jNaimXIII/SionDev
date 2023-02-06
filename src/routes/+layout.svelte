@@ -8,6 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;1,700&display=swap" rel="stylesheet" />
 </svelte:head>
 
-<!-- <slot /> -->
+<slot />
 
-<h1>Temporarily Out</h1>
+<!-- <h1>Temporarily Out</h1> -->
